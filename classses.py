@@ -26,9 +26,9 @@ class car(object):
 		cominv=com
 		commands=(com,cominv)	
 		commands = ('f','b') if com =='l' else ('b','f')
-		motorA.enable()
-		motorB.enable()
-		motorA.control(commands[0])
-		motorB.control(comands[1])
+		self.motorA.enable()
+		self.motorB.enable()
+		self.motorA.control(commands[0])
+		self.motorB.control(comands[1])
 
 				
