@@ -22,12 +22,10 @@ class car(object):
 	def __init__(self, motorA,motorB):
 		self.motorA = motorA
 		self.motorB = motorB
+		for i in ['A','B'] : eval('self.motor'+i+'.enable()')
 	def control(self,com):
-		cominv=com
-		commands=(com,cominv)	
-		commands = ('f','b') if com =='l' else ('b','f')
-		self.motorA.enable()
-		self.motorB.enable()
+		commands = ('f','b') if com =='l' else if com =='r' ('b','f') else (com,com)
+
 		self.motorA.control(commands[0])
 		self.motorB.control(comands[1])
 
